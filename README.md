@@ -54,3 +54,9 @@ Open your browser and visit [http://localhost:3000](http://localhost:3000) to vi
 - **React:** A JavaScript library for building user interfaces.
 - **Tailwind CSS:** A utility-first CSS framework for quickly styling your application.
 - **ui.shadcn:** (https://ui.shadcn.com/)
+
+## Deployment
+
+This React Show-Lit application is deployed on [Vercel](https://vercel.com/).
+
+- **Live Demo:** [https://show-lit.vercel.app/](https://show-lit.vercel.app/)
