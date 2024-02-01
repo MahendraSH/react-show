@@ -1,22 +1,19 @@
-import { Button } from "@/components/ui/button";
-import Navbar from "./components/navbar";
-import Footer from "./components/footer";
-import { ThemeProvider } from "./components/theme-provider";
-import { ModeToggle } from "./components/mode-toggle";
+import { Route, Routes } from "react-router-dom";
+import RootLayout from "./layout/Root-layout";
+import Home from "./pages/Home";
+import Shows from "./pages/Shows";
+import PageNotFound from "./pages/Page-not-found";
+import ShowIdPage from "./pages/Show-id-page";
 
 export default function App() {
   return (
-    <div className=" bg-background text-foreground">
-      <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-        <Navbar />
-        <main className=" flex justify-center items-center min-h-screen">
-          <Button>Click me</Button>
-        </main>
-        <span className=" fixed bottom-8 right-5 ">
-          <ModeToggle />
-        </span>
-        <Footer />
-      </ThemeProvider>
-    </div>
+    <Routes>
+      <Route path="/" element={<RootLayout />}>
+        <Route index element={<Home />} />
+        <Route path="/shows" element={<Shows />} />
+        <Route path="/shows/:id" element={<ShowIdPage />} />
+      </Route>
+      <Route path="*" element={<PageNotFound />} />
+    </Routes>
   );
 }
