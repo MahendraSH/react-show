@@ -104,3 +104,7 @@ html {
  ::-webkit-scrollbar-thumb:hover {
   background: hsl(214, 3%, 41%);
 }
+
+body {
+  font-family: "Roboto";
+}
